@@ -7,10 +7,6 @@
 // command shift R to refresh and clear cache
 // trunk serve
 
-use egui::Visuals;
-
-
-
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 #[derive(serde::Deserialize, serde::Serialize)]
@@ -66,7 +62,7 @@ impl eframe::App for TemplateApp {
             // The central panel the region left after adding TopPanel's and SidePanel's
 
             ui.heading("Hello!\n");
-            ui.label("My name is Henry Routson, you can see some of my work below.");
+            ui.label("My name is Henry Routson,\nyou can see some of my work below.");
             ui.hyperlink("https://github.com/HenryRoutson");
 
             ui.label("\n");
@@ -120,7 +116,8 @@ impl eframe::App for TemplateApp {
 
   
 
-        });*/
+        });
+        */
 
         
     }
