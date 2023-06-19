@@ -66,27 +66,35 @@ impl eframe::App for TemplateApp {
             // The central panel the region left after adding TopPanel's and SidePanel's
 
             ui.heading("Hello!\n");
-            ui.label("My name is Henry Routson");
+            ui.label("My name is Henry Routson, you can see some of my work below.");
             ui.hyperlink("https://github.com/HenryRoutson");
 
+            ui.label("\n");
 
-            ui.heading("Projects");
+            ui.heading("Projects\n");
 
-            ui.add(egui::Hyperlink::from_label_and_url("C ", "https://www.linkedin.com/in/henryroutson/"));
+            ui.add(egui::Hyperlink::from_label_and_url("Multithreaded remote procedure call server in c", "https://github.com/HenryRoutson/UniversityProjects/tree/main/C/ComputerSystems/comp30023-2023-project-2-main"));
 
+            ui.add(egui::Hyperlink::from_label_and_url("Virtual Operating system process multiplexing and memory allocation simulation in c", "https://github.com/HenryRoutson/UniversityProjects/tree/main/C/ComputerSystems/comp30023-2023-project-1-main"));
+
+            ui.add(egui::Hyperlink::from_label_and_url("Quadtree in c for high performance data analysis", "https://github.com/HenryRoutson/UniversityProjects/tree/main/C/AlgorithmsAndDataStructures/DS_A2_quadtree"));
+
+
+            ui.add(egui::Hyperlink::from_label_and_url("Flow free game solver using dijstra and A*", "https://github.com/HenryRoutson/UniversityProjects/tree/main/C/AlgorithmsAndDataStructures/DS_A3_flowFree_solver_dijstra"));
 
         });
 
         egui::SidePanel::right("side_panel").min_width(200.0).show(ctx, |ui| {
 
+            ui.label("\n");
 
+            ui.heading("Light / Dark");
             egui::widgets::global_dark_light_mode_switch(ui);
 
             ui.heading("\nContact");
             ui.label("Phone: +61 419 108 859");
             ui.add(egui::Hyperlink::from_label_and_url("Click here to Email", "mailto:Henry_Rou@protonmail.com"));
             ui.add(egui::Hyperlink::from_label_and_url("LinkedIn", "https://www.linkedin.com/in/henryroutson/"));
-
 
             ui.label("\n");
 
